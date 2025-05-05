@@ -1,0 +1,33 @@
+.hide {
+    display: none;
+}
+
+.dropdown-placeholder {
+    color: gray;
+}
+
+.dropdown-input {
+    border: 2px solid black;
+    border-radius: 3px;
+    display: inline-block;
+    width: 9em;
+    padding: 3px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.dropdown-panel {
+    border: 2px solid black;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 9em;
+    padding: 3px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 2px 2px 2px gray;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 3px;
+}
