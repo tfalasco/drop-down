@@ -18,6 +18,16 @@ function createDropdown(id, callback, placeholder, data) {
 
     // Toggle the panel visibility when the input is clicked
     input.addEventListener("click", () => {
+        // Close the panel of all other dropdowns when this
+        // one is opened
+        const allPanels = document.querySelectorAll(".dropdown-panel");
+        allPanels.forEach(somePanel => {
+            if (panel !== somePanel) {
+                somePanel.classList.add("hide");
+            }
+        });
+
+        // Toggle the visibility of this panel
         panel.classList.toggle("hide");
     })
 
