@@ -17,3 +17,6 @@ const dd1 = createDropdown("dd1", loadUpCallback, "Select pack animal", dropDown
 const content = document.querySelector("#content");
 content.appendChild(dd1);
 
+const dropDownOptions2 = ["Let's go", "Move out", "Hyah!", "Mush"];
+const dd2 = createDropdown("dd2", callback1, "Select motivational phrase", dropDownOptions2);
+content.appendChild(dd2);
