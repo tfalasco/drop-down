@@ -2,6 +2,11 @@
     display: none;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-placeholder {
     color: gray;
 }
@@ -22,6 +27,7 @@
     width: 9em;
     padding: 3px;
     position: absolute;
+    z-index: 9999;
     background-color: white;
     box-shadow: 2px 2px 2px gray;
     max-height: 100px;
@@ -34,4 +40,12 @@
 
 .dropdown-item:hover {
     background-color: lightgray;
+}
+
+.dropdown-arrow {
+    color: gray;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 4px;
+    right: 5px;
 }
