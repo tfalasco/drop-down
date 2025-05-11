@@ -1,6 +1,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    margin: 3px;
 }
 
 .dropdown-placeholder {
@@ -11,32 +12,42 @@
     border: 2px solid black;
     border-radius: 3px;
     display: inline-block;
-    width: 9em;
+    width: 13em;
     padding: 3px;
     box-shadow: 2px 2px 2px gray;
+}
+
+.dropdown-drawer {
+    position: absolute;
+    background: transparent;
+    height: 110px;
+    width: 100%;
+    z-index: 9999;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
 }
 
 .dropdown-panel {
     border: 2px solid black;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    width: 9em;
+    width: calc(13em - 2px);
     padding: 3px;
     position: absolute;
+    top: 0px;
     z-index: 9999;
     background-color: white;
     box-shadow: 2px 2px 2px gray;
     max-height: 100px;
     overflow-y: auto;
-    opacity: 1;
     transform: translateY(0px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     pointer-events: auto;
 }
 
 .dropdown-panel.hide {
-    opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-110px);
     pointer-events: none;
 }
 

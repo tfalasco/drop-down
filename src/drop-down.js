@@ -19,9 +19,16 @@ function createDropdown(id, callback, placeholder, data) {
     arrow.classList = "dropdown-arrow";
     arrow.innerText = "\u25BC";
 
+    // Create a slide-down drawer
+    const drawer = document.createElement("div");
+    drawer.classList = "dropdown-drawer";
+
     // Create a panel to house the data items
     const panel = document.createElement("div");
     panel.classList = "dropdown-panel hide";
+
+    // Add the panel to the drawer
+    drawer.appendChild(panel);
 
     // Toggle the panel visibility when the input is clicked
     input.addEventListener("click", () => {
@@ -34,7 +41,7 @@ function createDropdown(id, callback, placeholder, data) {
                 somePanel.classList.add("hide");
 
                 // Un-rotate the arrow
-                const parentDropDown = somePanel.parentNode;
+                const parentDropDown = somePanel.parentNode.parentNode;
                 const someArrow = parentDropDown.querySelector(".dropdown-arrow");
                 someArrow.style.transform = "rotate(0deg)";
             }
@@ -82,7 +89,7 @@ function createDropdown(id, callback, placeholder, data) {
     // Add the elements to the container
     container.appendChild(input);
     container.appendChild(arrow);
-    container.appendChild(panel);
+    container.appendChild(drawer);
 
     return container;
 }
